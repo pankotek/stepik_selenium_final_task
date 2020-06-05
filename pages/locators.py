@@ -18,3 +18,9 @@ class ProductPageLocators:
 
 class BasePageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    BASKET_LINK = (By.CSS_SELECTOR, 'a[href$="basket/"]')
+
+
+class BasketPageLocators:
+    BASKET_NOT_EMPTY = (By.CSS_SELECTOR, ".basket_summary")
+    BASKET_NOT_EMPTY_TEXT = (By.CSS_SELECTOR, ".basket_summary")
