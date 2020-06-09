@@ -23,4 +23,4 @@ class BasePageLocators:
 
 class BasketPageLocators:
     BASKET_NOT_EMPTY = (By.CSS_SELECTOR, ".basket_summary")
-    BASKET_NOT_EMPTY_TEXT = (By.CSS_SELECTOR, ".basket_summary")
+    BASKET_NOT_EMPTY_TEXT = (By.CSS_SELECTOR, "#content_inner > p")
