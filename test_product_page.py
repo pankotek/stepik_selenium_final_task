@@ -68,13 +68,13 @@ def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
 
 
 class TestUserAddToBasketFromProductPage:
-    pytest.fixture(scope='function', autouse=True)
+    @pytest.fixture(scope="function", autouse=True)
     def setup(self, browser):
         link = "http://selenium1py.pythonanywhere.com/accounts/login/"
-        self.page = LoginPage(browser, link)
-        self.page.open()
-        self.page.register_new_user(str(time.time()) + "@fakemail.org", "12345678a")
-        self.page.should_be_authorized_user()
+        login_page = LoginPage(browser, link)
+        login_page.open()
+        login_page.register_new_user(str(time.time()) + "@fakemail.org", '12345678abc')
+        login_page.should_be_authorized_user()
 
     def test_user_cant_see_success_message(self, browser):
         link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207"
