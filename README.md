@@ -1,1 +1,1 @@
-# stepik_selenium_final_task
+Project for last module of stepik selenium course
